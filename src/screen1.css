@@ -1,0 +1,17 @@
+@media screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .title {
+        order: 1;
+    }
+    .table {
+        order: 2;
+    }
+}
+.table {
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+}
