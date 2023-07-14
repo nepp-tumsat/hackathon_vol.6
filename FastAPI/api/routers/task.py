@@ -35,13 +35,7 @@ async def update_task(
     
     return await task_crud.update_task(db, task_body, original=task)
 
-@router.put("/update_time_limit")   #タスク期限変更(自由に変更可)
-async def update_time_limit(
-
-):
-    pass
-
-@router.put("/update_task_content") #タスク内容変更(自由に変更可)
+@router.put("/update_task") #タスク内容、期限変更(自由に変更可)
 async def update_task_content(
 
 ):

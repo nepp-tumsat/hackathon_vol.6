@@ -1,4 +1,4 @@
-cd コマンドでFastAPIに移動し、以下の順番でコードを実行する
+#cd コマンドでFastAPIに移動し、以下の順番でコードを実行する
 
 docker-compose build
 docker-compose up
