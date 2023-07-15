@@ -1,19 +1,25 @@
 .table {
     background-color: black;
-    color: green;
-    border: 1px dashed green;
-    height: 500px;
+    color: rgb(154, 255, 193);
+    border: 1px dashed rgb(154, 255, 193);
+    height: auto;
+    width: auto;
     overflow: auto;
 }
 
 .table th, .table td {
-    border-bottom: 1px dashed green;
+    border-bottom: 1px dashed rgb(154, 255, 193);
+    padding: 10px;
+}
+
+.table input[type='checkbox'] {
+    transform: scale(1.5);
 }
 
 .add-task-button {
     background-color: black;
-    color: green;
-    border: 1px solid green;
+    color: rgb(154, 255, 193);
+    border: 1px solid rgb(154, 255, 193);
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
@@ -21,14 +27,14 @@
 }
 
 .add-task-button:hover {
-    background-color: green;
+    background-color: rgb(154, 255, 193);
     color: black;
 }
 
 .api-button {
     background-color: black;
-    color: green;
-    border: 1px solid green;
+    color: rgb(154, 255, 193);
+    border: 1px solid rgb(154, 255, 193);
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
@@ -36,7 +42,7 @@
 }
 
 .api-button:hover {
-    background-color: green;
+    background-color: rgb(154, 255, 193);
     color: black;
 }
 
@@ -61,3 +67,9 @@
     width: 80%;
 }
 
+body, html {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
