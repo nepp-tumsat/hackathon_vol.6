@@ -5,7 +5,7 @@ const Screen1 = () => {
     return (
         <div className='container'>
             <div className='title'>
-                <h1>To Do <span className='highlight'>Vise</span></h1>
+                <h1>To Do <span className='highlight'>Vise</span> !!! </h1>
                 <p>やることを<span className='highlight'>見える化</span>しよう！<br />下の表に書き、さあ始めよう！</p>
             </div>
             <div className='input-fields'>

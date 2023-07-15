@@ -4,11 +4,14 @@
     align-items: center;
     justify-content: center;
     background-color: black;
-    color: green;
+    color: rgb(154, 255, 193);
+    font-family: "Comic Sans MS",cursive;
 }
 
 .title {
     text-align: center;
+    font-family: "Comic Sans MS",cursive;
+    font-style: italic;
 }
 
 .title .highlight {
@@ -20,15 +23,16 @@
     flex-direction: column;
     align-items: center;
     background-color: black;
-    color: green;
-    border: 1px solid green;
+    color: rgb(154, 255, 193);
+    border: 1px solid rgb(154, 255, 193);
     padding: 20px;
     width: 100%;
 }
 
 .input-fields input {
-    color: green;
-    border: 1px solid green;
+    color: rgb(154, 255, 193);
+    background-color: black;
+    border: 1px solid rgb(154, 255, 193);
     margin-bottom: 10px;
     padding: 5px;
     width: 80%;
@@ -37,11 +41,12 @@
 .continue-button {
     background: none;
     border: none;
-    color: green;
+    color: rgb(154, 255, 193);
     font-size: 1em;
     margin: 20px;
     padding: 0.25em 1em;
     transition: 0.3s;
+    font-family: "Comic Sans MS",cursive;
 }
 
 .continue-button span {
@@ -55,4 +60,10 @@
 
 .continue-button:active {
     transform: translateY(-1px);
+}
+
+@media screen and (width: 600px) {
+    body {
+        color: red;
+    }
 }
