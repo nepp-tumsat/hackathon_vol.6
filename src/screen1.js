@@ -5,31 +5,18 @@ const Screen1 = () => {
     return (
         <div className='container'>
             <div className='title'>
-                <h1>ToDoVise</h1>
-                <p>やることを見える化しよう！<br />下の表に書き、さあ始めよう！</p>
+                <h1>To Do <span className='highlight'>Vise</span></h1>
+                <p>やることを<span className='highlight'>見える化</span>しよう！<br />下の表に書き、さあ始めよう！</p>
             </div>
-            <div className='table'>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>タイトル</th>
-                            <th>期限</th>
-                            <th>内容</th>
-                        </tr>
-                        <tr>
-                            <td>デモタスク1</td>
-                            <td>2023-07-20</td>
-                            <td>これはデモタスクです。</td>
-                        </tr>
-                        <tr>
-                            <td>デモタスク2</td>
-                            <td>2023-07-21</td>
-                            <td>これもデモタスクです。</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div className='input-fields'>
+                <input type='text' placeholder='名前' />
+                <input type='text' placeholder='職業' />
+                <input type='text' placeholder='趣味' />
+                <input type='text' placeholder='趣味にかけるお金' />
             </div>
-            <button onClick={() => window.location.href='/screen2'}>To be continue...</button>
+            <button className='continue-button' onClick={() => window.location.href='/screen2'}>
+                To be continue... <span>→</span>
+            </button>
         </div>
     );
 }

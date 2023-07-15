@@ -1,17 +1,58 @@
-@media screen and (min-width: 600px) {
-    .container {
-        display: flex;
-        justify-content: space-between;
-    }
-    .title {
-        order: 1;
-    }
-    .table {
-        order: 2;
-    }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: green;
 }
-.table {
+
+.title {
+    text-align: center;
+}
+
+.title .highlight {
+    color: red;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: black;
     color: green;
     border: 1px solid green;
+    padding: 20px;
+    width: 100%;
+}
+
+.input-fields input {
+    color: green;
+    border: 1px solid green;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 80%;
+}
+
+.continue-button {
+    background: none;
+    border: none;
+    color: green;
+    font-size: 1em;
+    margin: 20px;
+    padding: 0.25em 1em;
+    transition: 0.3s;
+}
+
+.continue-button span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.continue-button:hover {
+    transform: translateY(-3px);
+}
+
+.continue-button:active {
+    transform: translateY(-1px);
 }
