@@ -1,8 +1,45 @@
 .table {
     background-color: black;
     color: green;
-    border: 1px solid green;
+    border: 1px dashed green;
+    height: 500px;
+    overflow: auto;
 }
+
+.table th, .table td {
+    border-bottom: 1px dashed green;
+}
+
+.add-task-button {
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-task-button:hover {
+    background-color: green;
+    color: black;
+}
+
+.api-button {
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.api-button:hover {
+    background-color: green;
+    color: black;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -15,6 +52,7 @@
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
+
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -22,3 +60,4 @@
     border: 1px solid #888;
     width: 80%;
 }
+
