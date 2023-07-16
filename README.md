@@ -51,7 +51,8 @@ npm start
 ### デモ動画
 
 
-https://github.com/nepp-tumsat/hackathon_vol.6/assets/112185666/05ba28e7-353d-4471-bb87-7a3ffd747e1a
+
+https://github.com/nepp-tumsat/hackathon_vol.6/assets/112185666/211a64ed-e55c-46c2-b1d9-8ac7cbc0017c
 
 
 
