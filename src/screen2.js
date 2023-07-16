@@ -10,6 +10,7 @@ const Screen2 = () => {
     const [completed, setCompleted] = useState(false);
     const [gptAdvice, setGptAdvice] = useState('');
     const [gptModalOpen, setGptModalOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -42,9 +43,11 @@ const Screen2 = () => {
     };
 
     const fetchGptAdvice = async () => {
+        setLoading(true);
         const response = await axios.get('http://localhost:8000/gpt');
         setGptAdvice(response.data.advice);
         setGptModalOpen(true);
+        setLoading(false);
     };
 
     return (
@@ -89,6 +92,7 @@ const Screen2 = () => {
                     </div>
                 </div>
             )}
+            {loading && <div className='loading'></div>}
         </div>
     );
 }
