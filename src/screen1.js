@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './screen1.css';
+import axios from 'axios';
 
 const Screen1 = () => {
     const [name, setName] = useState("");
@@ -7,10 +8,16 @@ const Screen1 = () => {
     const [hobby, setHobby] = useState("");
     const [hobbyCost, setHobbyCost] = useState("");
 
-    const handleClick = () => {
+    const handleClick = async () => {
         if (!name || !job || !hobby || !hobbyCost) {
             alert("全てのフィールドを入力してください");
         } else {
+            axios.post('http://localhost:8000/gpt', {
+                name,
+                job,
+                hobby,
+                money: hobbyCost
+            });
             window.location.href = '/screen2';
         }
     };

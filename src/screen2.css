@@ -31,6 +31,21 @@
     color: black;
 }
 
+.delete-task-button{
+    background-color: black;
+    color: rgb(154, 255, 193);
+    border: 1px solid rgb(154, 255, 193);
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-task-button:hover {
+    background-color: rgb(154, 255, 193);
+    color: black;
+}
+
 .api-button {
     background-color: black;
     color: rgb(154, 255, 193);
