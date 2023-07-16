@@ -11,6 +11,7 @@ const Screen2 = () => {
     const [gptAdvice, setGptAdvice] = useState('');
     const [gptModalOpen, setGptModalOpen] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [username, setUserName] = useState('');
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -46,6 +47,7 @@ const Screen2 = () => {
         setLoading(true);
         const response = await axios.get('http://localhost:8000/gpt');
         setGptAdvice(response.data.advice);
+        setUserName(response.data.username);
         setGptModalOpen(true);
         setLoading(false);
     };
@@ -88,6 +90,7 @@ const Screen2 = () => {
                 <div className='modal' style={{display: 'block'}}>
                     <div className='modal-content'>
                         <span onClick={() => setGptModalOpen(false)}>&times;</span>
+                        <p>{username}さんにおすすめの趣味はこちらです！</p>
                         <p>{gptAdvice}</p>
                     </div>
                 </div>
