@@ -9,6 +9,7 @@ const Screen2 = () => {
     const [deadline, setDeadline] = useState('');
     const [completed, setCompleted] = useState(false);
     const [gptAdvice, setGptAdvice] = useState('');
+    const [gptModalOpen, setGptModalOpen] = useState(false);
 
     useEffect(() => {
         const fetchTasks = async () => {
@@ -26,15 +27,24 @@ const Screen2 = () => {
         setModalOpen(false);
     };
 
+    const deleteCheckedTasks = async () => {
+        const checkedTasks = tasks.filter(task => task.done);
+        for (const task of checkedTasks) {
+            await axios.delete(`http://localhost:8000/tasks/${task.id}`);
+        }
+        setTasks(tasks.filter(task => !task.done));
+    };
+
     const toggleCompletion = async index => {
         const task = tasks[index];
-        await axios.put(`http://localhost:8000/tasks/${task.id}/done`);
-        setTasks(tasks.map((task, i) => i === index ? {...task, completed: !task.completed} : task));
+        const response = task.done ? await axios.delete(`http://localhost:8000/tasks/${task.id}/done`) : await axios.put(`http://localhost:8000/tasks/${task.id}/done`);
+        setTasks(tasks.map((task, i) => i === index ? {...task, done: !task.done} : task));
     };
 
     const fetchGptAdvice = async () => {
         const response = await axios.get('http://localhost:8000/gpt');
         setGptAdvice(response.data.advice);
+        setGptModalOpen(true);
     };
 
     return (
@@ -58,8 +68,8 @@ const Screen2 = () => {
                 </table>
             </div>
             <button className='add-task-button' onClick={() => setModalOpen(true)}>タスクを追加</button>
+            <button className='delete-task-button' onClick={deleteCheckedTasks}>チェックしたタスクを削除</button>
             <button className='api-button' onClick={fetchGptAdvice}>やることを提案してもらう</button>
-            {gptAdvice && <div className='gpt-advice'>{gptAdvice}</div>}
             {modalOpen && (
                 <div className='modal' style={{display: 'block'}}>
                     <div className='modal-content'>
@@ -68,6 +78,14 @@ const Screen2 = () => {
                         <p>期限: <input type='date' value={deadline} onChange={e => setDeadline(e.target.value)} /></p>
                         <button onClick={addTask}>追加</button>
                         <button onClick={() => setModalOpen(false)}>キャンセル</button>
+                    </div>
+                </div>
+            )}
+            {gptModalOpen && (
+                <div className='modal' style={{display: 'block'}}>
+                    <div className='modal-content'>
+                        <span onClick={() => setGptModalOpen(false)}>&times;</span>
+                        <p>{gptAdvice}</p>
                     </div>
                 </div>
             )}

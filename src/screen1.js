@@ -12,7 +12,7 @@ const Screen1 = () => {
         if (!name || !job || !hobby || !hobbyCost) {
             alert("全てのフィールドを入力してください");
         } else {
-            await axios.post('http://localhost:8000/gpt', {
+            axios.post('http://localhost:8000/gpt', {
                 name,
                 job,
                 hobby,
