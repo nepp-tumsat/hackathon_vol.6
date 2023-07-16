@@ -1,6 +1,6 @@
 # hackathon_vol.6
 サポーターズVol.6ハッカソンで作ったAIToDoアプリ  
-<img width="378" alt="スクリーンショット 2023-07-16 18 08 31" src="https://github.com/nepp-tumsat/hackathon_vol.6/assets/112185666/2b0dd8ab-59c5-4eb8-a44d-c28c898a6fd4">  
+<img width="378" alt="https://github.com/nepp-tumsat/hackathon_vol.6/blob/main/ToDoViseimage.png">  
 AIがおすすめの行動を提案してくれます
 (2023/07/15~07/16)
 
