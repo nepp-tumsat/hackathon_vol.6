@@ -1,4 +1,6 @@
 # hackathon_vol.6
+サポーターズVol.6ハッカソンで作ったAIToDoアプリ
+(2023/07/15~07/16)
 
 ### ※hackathon_vol.6_apiにあるapiがないと動きません
 
